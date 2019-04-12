@@ -1,0 +1,164 @@
+a {
+	text-decoration: none;
+}
+
+.clear {
+	clear: both;
+}
+
+@font-face{
+    font-family: MyFont;
+    src: url("../vendor/Fonts/UTM Avo Bold.otf");
+}
+
+.font-roboto {
+	font-family: 'Roboto', sans-serif;
+}
+
+* {
+	margin: 0px;
+	padding: 0px;
+}
+
+body {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	height: 100vh;
+	font-family: MyFont;
+}
+
+#header {
+	background: url("../vendor/Photos/bg-header.png") no-repeat;
+	.container {
+		width: 1024px;
+		margin: 0 auto;
+		.header-top {
+			height: 110px;
+			.logo {
+				width: 80px;
+				height: 80px;
+				float: left;
+				margin-top: 15px;
+				margin-right: 15px;
+				img {
+					width: 100%;
+				}
+			}
+			.header-text {
+				float: left;
+				h1 {
+					font-size: 24px;
+					// font-weight: bold;
+					color: #9A5F4C;
+					text-transform: uppercase;
+					margin-top: 24px;
+				}
+				h5 {
+					font-size: 17px;
+					font-weight: 700;
+					color: #333333;
+					text-transform: uppercase;
+					margin-top: 12px;
+				}
+			}
+		}
+	}
+	.header-bottom {
+		width: 100%;
+		height: 40px;
+		background-color: #9A5F4C;
+		line-height: 40px;
+		.container-fluid {
+			width: 1024px;
+			margin: 0 auto;
+			.header-left {
+				float: left;
+				p {
+					color: #FFF;
+					font-size: 14px;
+					font-weight: 100;
+				}
+			}
+			.header-right {
+				float: right;
+				font-size: 13px;
+				img {
+					float: left;
+    				margin-top: 7px;
+				}
+				.user {
+					color: #FFF;
+					&::after {
+						content: "|";
+						padding:0 10px;
+					}
+					&::before {
+						content: "";
+						padding: 0 5px;
+					}
+				}
+				.log-out {
+					color: #FFF;
+				}
+			}
+		}
+	}	
+}
+
+#main {
+	width: 100%;
+	background-color: #eeeeee78;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	flex-grow: 1;
+	.container {
+		display: flex;
+		flex-wrap: wrap;
+		width: 1024px;
+		margin:auto;
+		.layer {
+			width: 31%;
+			align-items: center;
+			display: flex;
+			justify-content: space-around;
+			margin: 15px 10px;
+			align-items: center;
+			border: 1px solid #E7E7E7;
+			background-color: #FFF;
+			padding: 10px 0px;
+			border-radius: 4px;
+			a.icon {
+				width: 61px;
+				height: 61px;
+			}
+			a {
+				width: 193px;
+				font-weight: bold;
+				text-transform: uppercase;
+				font-size: 13px;
+				color: #333333;
+				line-height: 20px;
+			}
+			a.arrow {
+				width: 17.5px;
+			}
+		}
+	}
+}
+
+
+#footer {
+	.container {
+		width: 100%;
+		height: 44px;
+		line-height: 44px;
+		p {
+			font-size: 14px;
+			color: #000000;
+			text-align: center;
+			text-transform: uppercase;
+		}
+	}
+}
